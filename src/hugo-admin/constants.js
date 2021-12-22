@@ -8,12 +8,11 @@ export const categoryGroups = {
   EditorShort: [],
   EditorLong: [],
   ProArtist: [],
-  FanArtist: [],
   Zines: ['Semiprozine', 'Fanzine', 'Fancast'],
   FanWriter: [],
-  BestVideoGame: [],
-  NewWriter: [],
-  Lodestar: []
+  FanArtist: [],
+  Lodestar: [],
+  Astounding: []
 }
 
 export const minFinalistsPerCategory = 6
