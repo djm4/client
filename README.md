@@ -1,6 +1,6 @@
 # Kansa Client
 
-These are the front-end clients for [Kansa](https://github.com/maailma/kansa), a convention member management system.
+This is the Hugo admin portion of the client for [Kansa](https://github.com/maailma/kansa), a convention member management system.
 
 ## Getting Started
 
@@ -13,9 +13,6 @@ To use the client, you'll need a [Kansa](https://github.com/maailma/kansa) serve
 you can connect to. In development, the server is assumed to run at its default local address
 `https://localhost:4430/`; in production, the default is to use the same host that serves the
 client code. To specify a different target, use the `API_HOST` environment variable:
-
-The default dev-configured server provides an admin account with which you may log in by visiting:
-<http://localhost:8080/#/login/admin@example.com/key>
 
 ```
 API_HOST=api.dublin2019.com npm start
@@ -45,8 +42,7 @@ warning you navigate to your actual client development version, at `http://local
 
 ## Admin Interfaces
 
-The Kansa and Hugo admin interfaces are built partly from the same sources as the public-facing site,
-and are a part of the build targets specified in the Webpack config. Both of these require first
+The Hugo admin interface is built partly from the same sources as the public-facing site,
+and is a part of the build targets specified in the Webpack config. It requires first
 logging in using a login link. In dev mode:
-- <https://localhost:4430/kansa-admin.html>
 - <https://localhost:4430/hugo-admin.html>
