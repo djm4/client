@@ -6,9 +6,7 @@ const title = process.env.TITLE || 'Dublin2019'
 
 const cfg = {
   entry: {
-    bundle: ['./src/index.jsx'],
     'hugo-admin': ['./src/hugo-admin/index.jsx'],
-    'kansa-admin': ['./src/kansa-admin/index.jsx']
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -77,30 +75,11 @@ if (process.env.NODE_ENV === 'production') {
 
   cfg.plugins.push(
     new HtmlWebpackPlugin({
-      chunks: ['bundle'],
-      inject: 'body',
-      template: 'src/index.ejs',
-      title
-    })
-  )
-
-  cfg.plugins.push(
-    new HtmlWebpackPlugin({
       chunks: ['hugo-admin'],
       filename: 'hugo-admin.html',
       inject: 'body',
       template: 'src/index.ejs',
       title: 'Hugo Admin - ' + title
-    })
-  )
-
-  cfg.plugins.push(
-    new HtmlWebpackPlugin({
-      chunks: ['kansa-admin'],
-      filename: 'kansa-admin.html',
-      inject: 'body',
-      template: 'src/index.ejs',
-      title: 'Kansa Admin - ' + title
     })
   )
 
